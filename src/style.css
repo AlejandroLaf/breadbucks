@@ -29,7 +29,7 @@
 .carousel_slider_1, .carousel_slider_2, .carousel_slider_3{
     display: flex;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     height: 8rem;
     width: 100%;
    
@@ -44,6 +44,10 @@
     
 }
 
+
+
+
+/*
 .carousel_slider_1, .carousel_slider_3 {
 
     animation-name: scrolling_right;
@@ -56,7 +60,7 @@
     content: "";
     height: 8rem;
     width: 100%;
-
+*/
 /*https://www.w3.org/Style/Examples/007/slideshow.en.html*/
 }
 
