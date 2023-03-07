@@ -1,0 +1,62 @@
+.carousel_slider_1{}
+.carousel_slider_2{}
+.carousel_slider_3{}
+.carousel_img{}
+.carousel_img_container{}
+
+.carousel_img_container{
+    display: flex;
+    flex-direction: column;
+    
+    }
+
+/********IMAGE STYLING***********/
+.carousel_img {
+    
+    width: 8rem;
+    height: 8rem;
+}
+
+.carousel_img_container{
+    
+    height: 8rem;
+    width: 8rem;
+}
+
+/********SLIDERS STYLING***********/
+
+
+.carousel_slider_1, .carousel_slider_2, .carousel_slider_3{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 8rem;
+    width: 100%;
+   
+}
+
+/*****SLIDER ANIMATION********/
+
+@keyframes scrolling_right {
+
+    0% { transform: translateX(0); }
+	100% { transform: translateX(calc(8rem * 24))}
+    
+}
+
+.carousel_slider_1, .carousel_slider_3 {
+
+    animation-name: scrolling_right;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+}
+.carousel_slider_1, .carousel_slider_3 ::after,::before {
+
+    content: "";
+    height: 8rem;
+    width: 100%;
+
+/*https://www.w3.org/Style/Examples/007/slideshow.en.html*/
+}
+
