@@ -1,0 +1,57 @@
+/*INICIO FOOTER*/
+.footer {
+    padding: 2%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FEC5BB;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+ }
+
+ .footerContactoRRSS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+/*FIN FOOTER*/
+
+.footerInformacion, .footerAvisoLegal, .footerContacto, .footerContactoRRSS{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.texto{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*INICIO LOGO RRSS*/
+.footerRedesFace{
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logoRedes{
+    position: relative;
+    width: 33%;
+}
+/*FIN LOGO RRSS*/
+
+/*INICIO RESPONSIVE*/
+@media (max-width:769px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*FIN RESPONSIVE*/
