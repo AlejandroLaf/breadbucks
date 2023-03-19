@@ -1,13 +1,6 @@
-.carousel_slider_1 {}
-
-.carousel_slider_2 {}
-
-.carousel_slider_3 {}
-
-.carousel_img {}
-
-.carousel_img_container {}
-
+body {
+    margin: 0;
+}
 
 
 /********IMAGE STYLING***********/
@@ -19,8 +12,8 @@
 
 .carousel_img_container {
     display: block;
-    height: 14rem;
-    width: 14rem;
+    height: 10rem;
+    width: 10rem;
     margin: 1rem;
     box-shadow: 14px 14px 5px rgb(72, 33, 4);
 
@@ -30,22 +23,21 @@
 /********SLIDERS STYLING***********/
 /*slider*/
 .carousel_slider {
-    display: flex;
-    overflow: hidden;
+    display: flex;  
     height: auto;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
 .slider_part_1 {
 
     display: flex;
-    height: 18rem;
-    width: calc(20rem * 24);
+    height: 14rem;
+    width: calc(12rem * 24);
     left: 0%;
     top: 0%;
     animation-name: scrolling_part_1;
-    animation-duration: 45s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     margin-top: 2rem;
@@ -63,27 +55,32 @@
     transform: scale(1.4);
     z-index: 3;
     box-shadow: none;
-    
+
 }
 
-/*No funciona
+/*Difuminados carrusel, solo funcinona el after???? cambiar fondo*/
 .carousel_slider::before {
     background: linear-gradient(to right, rgb(255, 255, 255, 1), rgb(255, 255, 255, 0));
-    height: 18rem;
-    width: 6rem;
-    position: relative;
-    z-index: 2;
-    
+    height: 14rem;
+    width: 8rem;
+    position: absolute;
+    content: " ";
+    left: 0;
+
 }
+
 .carousel_slider::after {
     background: linear-gradient(to left, rgb(255, 255, 255, 1), rgb(255, 255, 255, 0));
-    height: 18rem;
-    width: 6rem;
-    position: relative;
-    z-index: 2;
-    
+    height: 14rem;
+    width: 8rem;
+    position: absolute;
+    content: " ";
+    right: 0;
 }
-*/
+
+
+
+/**/
 
 
 
@@ -95,8 +92,12 @@
         transform: translateX(0);
     }
 
+    50% {
+        transform: translateX(calc(-11rem * 16));
+    }
+
     100% {
-        transform: translateX(calc(-20rem * 12));
+        transform: translateX(-10rem);
     }
 
 }
@@ -104,21 +105,43 @@
 /****Responsive****/
 
 @media (max-width: 700px) {
+
     /** Cambio de tamaño**/
- .carousel_img_container {
-    height: 10rem;
-    width: 10rem;
-    margin: 0.6rem;
-    box-shadow: 10px 10px 4px rgb(72, 33, 4);
- }
+    .carousel_img_container {
+        height: 7rem;
+        width: 7rem;
+        margin: 1rem;
+        box-shadow: 10px 10px 4px rgb(72, 33, 4);
+    }
 
- .slider_part_1 {
+    .slider_part_1 {
 
-    
-    height: 13rem;
-    width: calc(11.2rem * 24);
-    margin-top: 1.4rem;
-    margin-bottom: 1.4rem;
-}
+
+        height: 10rem;
+        width: calc(7.6rem * 24);
+        margin-top: 1.1rem;
+        margin-bottom: 1.1rem;
+    }
+
+    @keyframes scrolling_part_1 {
+
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(calc(-8.8rem * 16));
+        }
+
+        100% {
+            transform: translateX(-7.8rem);
+        }
+
+    }
+
+    .carousel_slider::before, .carousel_slider::after{
+        width: 4rem;
+        height: 10rem;
+    }
 
 }
