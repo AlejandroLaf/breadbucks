@@ -118,7 +118,7 @@ body {
 
 
         height: 10rem;
-        width: calc(7.6rem * 24);
+        width: calc(9rem * 24);
         margin-top: 1.1rem;
         margin-bottom: 1.1rem;
     }
@@ -130,11 +130,11 @@ body {
         }
 
         50% {
-            transform: translateX(calc(-8.8rem * 16));
+            transform: translateX(calc(-9rem * 16));
         }
 
         100% {
-            transform: translateX(-7.8rem);
+            transform: translateX(-7rem);
         }
 
     }
